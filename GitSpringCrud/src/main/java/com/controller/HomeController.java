@@ -3,6 +3,7 @@ package com.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,11 +36,19 @@ public class HomeController {
 		return list;
 	}
 	
-	@PutMapping("student/{id}")
+	@PutMapping("/student/{id}")
 	public Student updateData(@RequestBody Student s,@PathVariable int id) 
 	{
 		return si.updateData(s,id);
 		
 	}
+	
+	@DeleteMapping("/delStu/{id}")
+	public void deleteStudent(@PathVariable int id)
+	{
+		si.deleteData(id);
+	}
+	
+	
 	
 }

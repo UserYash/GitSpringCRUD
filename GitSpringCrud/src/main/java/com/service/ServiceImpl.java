@@ -44,4 +44,10 @@ public class ServiceImpl implements ServiceI{
             return null; 
         }
     }
+
+	@Override
+	public void deleteData(int id) {
+	
+		sr.deleteById(id);
+	}
 }

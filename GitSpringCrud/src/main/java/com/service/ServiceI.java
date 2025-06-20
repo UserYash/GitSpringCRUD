@@ -12,4 +12,6 @@ public interface ServiceI {
 
 	public Student updateData(Student s, int id);
 
+	public void deleteData(int id);
+
 }
