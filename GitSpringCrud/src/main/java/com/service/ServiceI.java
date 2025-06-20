@@ -10,4 +10,6 @@ public interface ServiceI {
 
 	public List<Student> getAllData();
 
+	public Student updateData(Student s, int id);
+
 }
